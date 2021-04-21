@@ -16,12 +16,12 @@ public class StatisticService {
         String[] countries = Constant.countries;
         List<Covid> list = new ArrayList<>();
 
-        for (int i = 0; i < countries.length; i++) {
+        for (String country : countries) {
             int confirmed = new Random().nextInt(99999);
             int recovered = new Random().nextInt(99999);
             int deaths = new Random().nextInt(99999);
 
-            list.add(new Covid(countries[i], confirmed, recovered, deaths));
+            list.add(new Covid(country, confirmed, recovered, deaths));
         }
 
         return list;
